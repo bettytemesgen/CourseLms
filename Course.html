@@ -1,0 +1,2014 @@
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant+Upright:wght@300;400;600;700&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&family=Great+Vibes&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+    rel="stylesheet"
+   />
+   <link rel = "icon" href = "./assets/logo.png" 
+   type = "image/x-icon">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./studentindex.css" />
+    
+    <link rel="stylesheet" href="./footer.css" />
+    <link rel="stylesheet" href="./studentnewmenu.css">
+
+    <link rel="stylesheet" href="./newplaylist.css">
+    <link rel="stylesheet" href="./video.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  </head>
+  <body>
+<!-- =========================================Navgation================================= -->
+
+<header>
+  <div class="navgation">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img class="menu-logo" src="./assets/logo.png" alt="" />
+    </div>
+    <div class="navbar-hamburger">
+      <span id="span"></span>
+      <span id="span"></span>
+      <span id="span"></span>
+      <span id="span"></span>
+    </div>
+    <div class="navbar-menu">
+      <ul class="Menu-container">
+        <li>
+          <a id="Links" class="Links" href="#">Home</a>
+        </li>
+        <li><a class="Links" href="#">About</a></li>
+        <li><a class="Links" href="#">Contact</a></li>
+      
+        <li>
+          
+          <div class="dropdown">
+            <button class="dropdown-toggle"> <i class="fa fa-user-circle"></i></button>
+            <!-- <div class="dropdown-content" id="dropdown"> -->
+              <div class="dropdown-menu">
+              <a href="#"><i class="bx bx-cog"></i> Settings</a>
+              <a href="#"><i class="bx bx-user"></i> Profile</a>
+              <a href="#"><i class="bx bx-question-mark"></i>Help</a>
+              <!-- <a href="#"><i class="fab fa-sign-out-alt"></i> Logout</a> -->
+              <a href="#"><img src="/assets/logout.png"> Logout</a>
+            </div>
+            <script>
+              // ====================================================click drop down icon anywhere==========================
+
+const dropdown = document.querySelector(".dropdown");
+
+document.addEventListener("click", (event) => {
+  // Close the dropdown if clicked outside the dropdown
+  if (!dropdown.contains(event.target)) {
+    closeDropdown();
+  }
+});
+
+dropdown
+  .querySelector(".dropdown-toggle")
+  .addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent the document listener from triggering
+    toggleDropdown();
+  });
+
+function toggleDropdown() {
+  dropdown.classList.toggle("show");
+}
+
+function closeDropdown() {
+  dropdown.classList.remove("show");
+}
+            </script>
+          </div>
+        </li>
+        <div class="All__Btn"> 
+         
+        </div>
+      </ul>
+    </div>
+  </nav>
+</div>
+</header>
+
+<!-- ============================================================Desktop view================================================ -->
+<!-- <div class="main__section"> -->
+  <div class="dashboard-container">
+    <div id="left" class="course">
+      <h2>Biomedical Science</h2>
+      <div class="accordion">
+          <div class="accordion-header"><i class="bx bx-book"></i>
+            Module 1: Introduction
+            <span id="span"  class="toggle-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+           
+          
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"> 
+                <i class="bx bx-folder"></i>
+              
+                <span id="span"> PDF and other materials</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <a href="./pdf/certficate.pdf" target="_blank">View PDF</a>
+                <a href="./pdf/certficate.pdf" download>Download PDF</a>
+             
+              </div>
+              
+            </div>
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                <span id="span">video</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                  
+                <div class="video-list">
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      controls
+                      muted
+                      autoplay
+                      
+                    ></video>
+      
+                    <h3 class="title">02.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">03.histology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">04.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">05.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">06.immunology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">07.Biochemistry</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">08.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="sub-accordion">
+              <div class="sub-accordion-header">
+                <i class="bx bx-book"></i>
+                <span id="span">Resources</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <p>All Resources</p>
+              </div>
+            </div>
+      
+            <!-- Add more sub-accordions as needed -->
+      
+      </div>
+          <!-- =======================================Second====================================== -->
+          <div class="accordion-header">
+            <i class="bx bx-book"></i>  Module 2:Genetics
+            <span id="span" class="toggle-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+          
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"> 
+                <i class="bx bx-folder"></i>
+              
+                <span id="span"> pdf and other materials</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <a href="path-to-pdf/module2.pdf" target="_blank">View PDF</a>
+                <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+               
+              </div>
+              
+            </div>
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                <span id="span">video</span>
+                <span id="span" class="toggle-icon"></span>
+              </div>
+              <div class="sub-accordion-content">
+                <div class="video-list">
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      controls
+                      muted
+                      autoplay
+                      
+                    ></video>
+      
+                    <h3 class="title">02.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">03.histology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">04.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">05.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">06.immunology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">07.Biochemistry</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">08.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+      <div class="sub-accordion">
+              <div class="sub-accordion-header">
+                <i class="bx bx-book"></i>
+                <span id="span">Resources</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <p>All Resources</p>
+              </div>
+            </div>
+          </div>
+          <!-- =================================Third================================================== -->
+          <div class="accordion-header">
+            <i class="bx bx-book"></i>  Module 3:Pharmacology<i class="bx bx-up"></i>
+            <span id="span" class="toggle-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+          
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"> 
+                <i class="bx bx-folder"></i>
+              
+                <span id="span"> pdf and other materials</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <a href="./pdf/certficate.pdf" target="_blank">View PDF</a>
+                <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+               
+              </div>
+              
+            </div>
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                <span id="span">video</span>
+                <span id="span" class="toggle-icon">></span>
+              </div>
+              <div class="sub-accordion-content">
+              
+                <div class="video-list">
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      controls
+                      muted
+                      autoplay
+                      
+                    ></video>
+      
+                    <h3 class="title">02.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">03.histology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">04.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">05.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">06.immunology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">07.Biochemistry</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">08.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                </div>
+            </div>
+            </div>
+      
+      <div class="sub-accordion">
+              <div class="sub-accordion-header">
+                <i class="bx bx-book"></i>
+                <span id="span">Resources</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <p>All Resources</p>
+              </div>
+            </div>
+          </div>
+          <!-- =============================Fourth Container============================================-->
+          <div class="accordion-header">
+            <i class="bx bx-book"></i>  Module 4:immunology
+            <span id="span" class="toggle-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+          
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"> 
+                <i class="bx bx-folder"></i>
+              
+                <span id="span"> pdf and other materials</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <a href="path-to-pdf/module2.pdf" target="_blank">View PDF</a>
+                <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+               
+              </div>
+              
+            </div>
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                <span id="span">video</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <div class="video-list">
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      controls
+                      muted
+                      autoplay
+                      
+                    ></video>
+      
+                    <h3 class="title">02.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">03.histology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">04.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">05.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">06.immunology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">07.Biochemistry</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">08.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+      <div class="sub-accordion">
+              <div class="sub-accordion-header">
+                <i class="bx bx-book"></i>
+                <span id="span">Resources</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <p>All Resources</p>
+              </div>
+            </div>
+          </div>
+          <!-- ================================ Fifteh container======================================================= -->
+          <div class="accordion-header">
+            <i class="bx bx-book"></i>  Module 5:Biochemistry
+            <span id="span" class="toggle-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+          
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"> 
+                <i class="bx bx-folder"></i>
+              
+                <span id="span"> pdf and other materials</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <a href="./pdf/certficate.pdf" target="_blank">View PDF</a>
+                <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+                <!-- <div id="pd-fcontainer">
+                  <iframe id="pd-fiframe" src="./pdf/certficate.pdf" target="_blank"View PDF></iframe>
+                </div> -->
+              </div>
+              
+            </div>
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                <span id="span">video</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <div class="video-list">
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      controls
+                      muted
+                      autoplay
+                      
+                    ></video>
+      
+                    <h3 class="title">02.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">03.histology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">04.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">05.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">06.immunology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">07.Biochemistry</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">08.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+      <div class="sub-accordion">
+              <div class="sub-accordion-header">
+                <i class="bx bx-book"></i>
+                <span id="span">Resources</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <p>All Resources</p>
+              </div>
+            </div>
+          </div>   
+          <!-- ============================= Six Container============================================== -->
+          <div class="accordion-header">
+            <i class="bx bx-book"></i>  Module 6:Genetics
+            <span id="span" class="toggle-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+          
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"> 
+                <i class="bx bx-folder"></i>
+              
+                <span id="span"> pdf and other materials</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                 <a href="path-to-pdf/module2.pdf" target="_blank">View PDF</a>
+                <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+                
+              </div>
+              
+            </div>
+            <div class="sub-accordion">
+              <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                <span id="span">video</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <div class="video-list">
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      controls
+                      muted
+                      autoplay
+                      
+                    ></video>
+      
+                    <h3 class="title">02.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">03.histology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">04.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">05.Biomedical</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">06.immunology</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">07.Biochemistry</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                  <div class="vid">
+                    <video
+                      src="./video//videoplayback.mp4"
+                      muted
+                      
+                    ></video>
+                    <h3 class="title">08.Genetics</h3>
+                    <input class="Check-icons" type="checkbox">
+      
+                    <h4>1:36</h4>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+      <div class="sub-accordion">
+              <div class="sub-accordion-header">
+                <i class="bx bx-book"></i>
+                <span id="span">Resources</span>
+                <span id="span" class="toggle-icon">▼</span>
+              </div>
+              <div class="sub-accordion-content">
+                <p>All Resources</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    
+    <script>
+      // Get all the accordion headers and add click event listeners
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+    accordionHeaders.forEach((header) => {
+      header.addEventListener("click", function () {
+        const accordionContent = this.nextElementSibling;
+        const toggleIcon = this.querySelector(".toggle-icon");
+        // Check if the clicked accordion is already active
+        const isActive = this.classList.contains("active");
+    
+        // Close all accordions
+        accordionHeaders.forEach((header) => {
+          header.classList.remove("active");
+          header.nextElementSibling.style.display = "none";
+        });
+    
+        // Toggle the clicked accordion's state
+        if (isActive) {
+          accordionContent.style.display = "none";
+        } else {
+          this.classList.add("active");
+          accordionContent.style.display = "block";
+        }
+    
+        // Update the toggle icon based on accordion state
+        toggleIcon.textContent = isActive ? "▲" : "▼";
+      });
+    });
+    
+    // Get all the sub-accordion headers and add click event listeners
+    const subAccordionHeaders = document.querySelectorAll(".sub-accordion-header");
+    subAccordionHeaders.forEach((header) => {
+      header.addEventListener("click", function (event) {
+        event.stopPropagation();
+        const subAccordionContent = this.nextElementSibling;
+        const toggleIcon = this.querySelector(".toggle-icon");
+        // Check if the clicked sub-accordion is already active
+        const isActive = this.classList.contains("active");
+    
+        // Close all sub-accordions
+        subAccordionHeaders.forEach((header) => {
+          header.classList.remove("active");
+          header.nextElementSibling.style.display = "none";
+        });
+    
+        // Toggle the clicked sub-accordion's state
+        if (isActive) {
+          subAccordionContent.style.display = "none";
+        } else {
+          this.classList.add("active");
+          subAccordionContent.style.display = "block";
+        }
+    
+        // Update the toggle icon based on sub-accordion state
+        toggleIcon.textContent = isActive ? "▲" : "▼";
+      });
+    });
+    // JavaScript to toggle the active class on hamburger click
+    document.addEventListener("DOMContentLoaded", function () {
+      var navbarHamburger = document.querySelector(".navbar-hamburger");
+      var navbarMenu = document.querySelector(".navbar-menu");
+    
+      navbarHamburger.addEventListener("click", function () {
+        navbarHamburger.classList.toggle("active");
+        navbarMenu.classList.toggle("active");
+      });
+    
+      document.addEventListener("click", function (event) {
+        var targetElement = event.target;
+        if (
+          !targetElement.closest(".navbar") &&
+          navbarHamburger.classList.contains("active")
+        ) {
+          navbarHamburger.classList.remove("active");
+          navbarMenu.classList.remove("active");
+        }
+      });
+    });
+    </script>
+    </div>
+  
+  
+   <!-- =================================================video==================================================== -->
+      <div id="right" class="course-overview">
+        <h2>Course Overview</h2>
+        <div class="course-list">
+          <!-- Course 1 -->
+          <div class="course">
+            <h3>Course 1</h3>
+            <div class="video">
+              <div class="main-video">
+                <div class="video">
+                  <video
+                    src="./video//videoplayback.mp4"
+                    controls
+                    muted
+                    autoplay
+                  ></video>
+                  <h3 class="title">01.Biomedical</h3>
+                </div>
+              </div>
+            </div>
+            <!-- <section class="newmain-video">
+              <video
+                src="videos/manipulate text background.mp4"
+                controls
+                autoplay
+              ></video>
+              <h3 class="title">Title of the playing Video.</h3>
+            </section> -->
+          </div>
+          
+          </div>
+          <div id="right" class="discription">
+            <div class="filter-buttons">
+              <button id="content" class="filter-button" data-filter="button6">Content</button>
+              <button class="filter-button active" data-filter="button1">Overview</button>
+              <button class="filter-button" data-filter="button2">Learning tools</button>
+              <button class="filter-button" data-filter="button3">Upcoming tasks</button>
+              <button class="filter-button" data-filter="button4">Discussion form</button>
+              <button class="filter-button" data-filter="button5">Note</button>
+          </div>
+          <div class="items">
+            
+            <div id="button6" class="item button6">
+              <h2>Biomedical Science</h2>
+              <div class="accordion">
+                  <div class="accordion-header"><i class="bx bx-book"></i>
+                    Module 1: Introduction
+                    <span id="span"  class="toggle-icon">▼</span>
+                  </div>
+                  <div class="accordion-content">
+                   
+                  
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"> 
+                        <i class="bx bx-folder"></i>
+                      
+                        <span id="span"> PDF and other materials</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <a href="./pdf/certficate.pdf" target="_blank">View PDF</a>
+                        <a href="./pdf/certficate.pdf" download>Download PDF</a>
+                     
+                      </div>
+                      
+                    </div>
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                        <span id="span">video</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                          
+                        <div class="video-list">
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              controls
+                              muted
+                              autoplay
+                              
+                            ></video>
+              
+                            <h3 class="title">02.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">03.histology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">04.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">05.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">06.immunology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">07.Biochemistry</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">08.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header">
+                        <i class="bx bx-book"></i>
+                        <span id="span">Resources</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <p>All Resources</p>
+                      </div>
+                    </div>
+              
+                    <!-- Add more sub-accordions as needed -->
+              
+              </div>
+                  <!-- =======================================Second====================================== -->
+                  <div class="accordion-header">
+                    <i class="bx bx-book"></i>  Module 2:Genetics
+                    <span id="span" class="toggle-icon">▼</span>
+                  </div>
+                  <div class="accordion-content">
+                  
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"> 
+                        <i class="bx bx-folder"></i>
+                      
+                        <span id="span"> pdf and other materials</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <a href="path-to-pdf/module2.pdf" target="_blank">View PDF</a>
+                        <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+                       
+                      </div>
+                      
+                    </div>
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                        <span id="span">video</span>
+                        <span id="span" class="toggle-icon"></span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <div class="video-list">
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              controls
+                              muted
+                              autoplay
+                              
+                            ></video>
+              
+                            <h3 class="title">02.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">03.histology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">04.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">05.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">06.immunology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">07.Biochemistry</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">08.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+              <div class="sub-accordion">
+                      <div class="sub-accordion-header">
+                        <i class="bx bx-book"></i>
+                        <span id="span">Resources</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <p>All Resources</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- =================================Third================================================== -->
+                  <div class="accordion-header">
+                    <i class="bx bx-book"></i>  Module 3:Pharmacology<i class="bx bx-up"></i>
+                    <span id="span" class="toggle-icon">▼</span>
+                  </div>
+                  <div class="accordion-content">
+                  
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"> 
+                        <i class="bx bx-folder"></i>
+                      
+                        <span id="span"> pdf and other materials</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <a href="./pdf/certficate.pdf" target="_blank">View PDF</a>
+                        <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+                       
+                      </div>
+                      
+                    </div>
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                        <span id="span">video</span>
+                        <span id="span" class="toggle-icon">></span>
+                      </div>
+                      <div class="sub-accordion-content">
+                      
+                        <div class="video-list">
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              controls
+                              muted
+                              autoplay
+                              
+                            ></video>
+              
+                            <h3 class="title">02.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">03.histology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">04.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">05.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">06.immunology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">07.Biochemistry</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">08.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+              
+              <div class="sub-accordion">
+                      <div class="sub-accordion-header">
+                        <i class="bx bx-book"></i>
+                        <span id="span">Resources</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <p>All Resources</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- =============================Fourth Container============================================-->
+                  <div class="accordion-header">
+                    <i class="bx bx-book"></i>  Module 4:immunology
+                    <span id="span" class="toggle-icon">▼</span>
+                  </div>
+                  <div class="accordion-content">
+                  
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"> 
+                        <i class="bx bx-folder"></i>
+                      
+                        <span id="span"> pdf and other materials</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <a href="path-to-pdf/module2.pdf" target="_blank">View PDF</a>
+                        <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+                       
+                      </div>
+                      
+                    </div>
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                        <span id="span">video</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <div class="video-list">
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              controls
+                              muted
+                              autoplay
+                              
+                            ></video>
+              
+                            <h3 class="title">02.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">03.histology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">04.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">05.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">06.immunology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">07.Biochemistry</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">08.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+              <div class="sub-accordion">
+                      <div class="sub-accordion-header">
+                        <i class="bx bx-book"></i>
+                        <span id="span">Resources</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <p>All Resources</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ================================ Fifteh container======================================================= -->
+                  <div class="accordion-header">
+                    <i class="bx bx-book"></i>  Module 5:Biochemistry
+                    <span id="span" class="toggle-icon">▼</span>
+                  </div>
+                  <div class="accordion-content">
+                  
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"> 
+                        <i class="bx bx-folder"></i>
+                      
+                        <span id="span"> pdf and other materials</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <a href="./pdf/certficate.pdf" target="_blank">View PDF</a>
+                        <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+                        <!-- <div id="pd-fcontainer">
+                          <iframe id="pd-fiframe" src="./pdf/certficate.pdf" target="_blank"View PDF></iframe>
+                        </div> -->
+                      </div>
+                      
+                    </div>
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                        <span id="span">video</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <div class="video-list">
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              controls
+                              muted
+                              autoplay
+                              
+                            ></video>
+              
+                            <h3 class="title">02.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">03.histology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">04.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">05.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">06.immunology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">07.Biochemistry</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">08.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+              <div class="sub-accordion">
+                      <div class="sub-accordion-header">
+                        <i class="bx bx-book"></i>
+                        <span id="span">Resources</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <p>All Resources</p>
+                      </div>
+                    </div>
+                  </div>   
+                  <!-- ============================= Six Container============================================== -->
+                  <div class="accordion-header">
+                    <i class="bx bx-book"></i>  Module 6:Genetics
+                    <span id="span" class="toggle-icon">▼</span>
+                  </div>
+                  <div class="accordion-content">
+                  
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"> 
+                        <i class="bx bx-folder"></i>
+                      
+                        <span id="span"> pdf and other materials</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                         <a href="path-to-pdf/module2.pdf" target="_blank">View PDF</a>
+                        <a href="path-to-pdf/module2.pdf" download>Download PDF</a>
+                        
+                      </div>
+                      
+                    </div>
+                    <div class="sub-accordion">
+                      <div class="sub-accordion-header"><i class="bx bx-video"></i>
+                        <span id="span">video</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <div class="video-list">
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              controls
+                              muted
+                              autoplay
+                              
+                            ></video>
+              
+                            <h3 class="title">02.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">03.histology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">04.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">05.Biomedical</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">06.immunology</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">07.Biochemistry</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                          <div class="vid">
+                            <video
+                              src="./video//videoplayback.mp4"
+                              muted
+                              
+                            ></video>
+                            <h3 class="title">08.Genetics</h3>
+                            <input class="Check-icons" type="checkbox">
+              
+                            <h4>1:36</h4>
+              
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+              <div class="sub-accordion">
+                      <div class="sub-accordion-header">
+                        <i class="bx bx-book"></i>
+                        <span id="span">Resources</span>
+                        <span id="span" class="toggle-icon">▼</span>
+                      </div>
+                      <div class="sub-accordion-content">
+                        <p>All Resources</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <script src="script.js"></script>
+            </div>
+              <div class="item button1"><h4>About course</h4><p>Medical studies are academic programs that prepare individuals to become healthcare professionals, providing them with the knowledge and skills necessary to diagnose, treat, and prevent illnesses and injuries. These courses are comprehensive and rigorous, combining theoretical knowledge with practical training, and they are
+                typically pursued at medical schools, universities, and other healthcare institutions</p>
+                <ul>
+                  <li> Skill level: Beginner Level
+                    <li>Students: 32157</li>
+                    <li>Languages: English</li>
+                    <li> Lectures: 10</li>
+                     <li> Video: 1 total hour</li>
+                </ul>
+              </div>
+              <div class="item button2">
+                <ul>
+                  <li>During this course, you will have access to a variety of learning resources:</li>
+    
+                   <li> Video Lectures: Engaging video lectures that cover each topic comprehensively.</li>
+                    <li>Reading Materials: Detailed readings that complement the video content.</li>
+                   <li> Quizzes and Assignments: Assess your understanding through quizzes and hands-on assignments.</li>
+                   <li> Discussion Forums: Engage with your peers and instructors to ask questions and discuss concepts</li>
+                </ul>
+              </div>
+              
+              <div class="item button3">
+                <ul>
+                  <h4>Module:7 </h4><p>Medical Imaging and Diagnostics</p>
+    
+                    <li>Task: Prepare case-based assessments using medical imaging data.</li>
+                    <li>Description: Compile actual medical images (X-rays, MRI scans, etc.)  </li>
+    
+                    <h4>Module:8 </h4><p> Research Methods in Medicine</p>
+    
+                    <li>Task: Design a group project on conducting medical research..</li>
+                    <li>Description: Compile actual medical images (X-rays, MRI scans, etc.)  </li>
+                    <h4>Module:9 </h4><p>Patient Communication and Cultural Competency</p>
+    
+                    <li>Task: Prepare case-based assessments using medical imaging data.</li>
+                    <li>Description: Compile actual medical images (X-rays, MRI scans, etc.)  </li>
+                   
+                </ul>
+              </div>
+              <div class="item button4">  
+                <div class="qna-container">
+                <!-- <h1>Discussion form</h1> -->
+                <div class="qna-form">
+                  <h2>Ask a Question</h2>
+                  <textarea  id="question-title" placeholder="Question Title"></textarea>
+                  <textarea class="First-text"  id="question-content" placeholder="Question Content"></textarea>
+                  <button id="ask-button">Ask</button>
+                </div>
+                <div class="qna-list" id="qna-list">
+              
+                </div>
+              </div></li>
+              </ul>
+            
+              </div>
+              <div class="item button5">
+                <h1>betty</h1>
+              </div>
+              </div>
+              <script>
+                // ===================================================disscution form============================
+    const askButton = document.getElementById('ask-button');
+    const questionTitleInput = document.getElementById('question-title');
+    const questionContentInput = document.getElementById('question-content');
+    const qnaList = document.getElementById('qna-list');
+    
+    askButton.addEventListener('click', () => {
+      const title = questionTitleInput.value;
+      const content = questionContentInput.value;
+    
+      if (title && content) {
+        createQnaPair(title, content);
+        questionTitleInput.value = '';
+        questionContentInput.value = '';
+      }
+    });
+    
+    function createQnaPair(question, answer) {
+      const qnaDiv = document.createElement('div');
+      qnaDiv.classList.add('qna-list');
+      qnaDiv.innerHTML = `
+        <h2>Q: ${question}</h2>
+        <p>A: ${answer}</p>
+      `;
+      qnaList.appendChild(qnaDiv);
+    }
+              </script>
+            </div>
+        </div>
+      
+
+<!-- <div class="dashboard-container"> -->
+
+     <!-- =========================================Atachifile==================== -->
+<div id="left" class="attach">
+  <div id="Attach" class="container">
+      <h1>Attache File</h1>
+      <form id="fileForm">
+          <label for="fileInput">Select a file:</label>
+          <input type="file" id="fileInput" name="fileInput" />
+         
+          <button class="Upload__btns">Upload</button>
+      </form>
+      <div id="selectedFile"></div>
+  </div>
+  </div>
+  
+      
+      </div>
+      <script>
+        const filterButtons = document.querySelectorAll('.filter-button');
+const items = document.querySelectorAll('.item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.getAttribute('data-filter');
+        items.forEach(item => item.classList.remove('active'));
+        document.querySelectorAll(`.${filter}`).forEach(item => item.classList.add('active'));
+    });
+});
+
+// Show the default button and items
+document.querySelector('.filter-button[data-filter="button1"]').click();
+      </script>
+     
+</div>
+    
+ 
+</div>
+
+<script src="script.js"></script>
+    <!-- ================Footer======================================================================= -->
+     <section>
+      <!-- <div class="footer__dashboard"> -->
+      <footer class="footer__dashboard">
+        <div class="containers">
+          <div class="column">
+            <img src="./assets//logo.png" alt="LMS Logo" />
+          </div>
+          <div class="column">
+            <h4>Active Pages</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <h4>Contact Us</h4>
+            <p>Email: example@example.com</p>
+            <p>Address: 123 ABC Street, City, Country</p>
+          </div>
+          <div class="column">
+        
+            <h4>Social Media</h4>
+            <p>do you need our help? Feel free to contact us.</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-telegram"></i></a>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+           
+            
+      </div>
+            </div>
+          </div>
+        </div>
+        <h1 class="footer__class">
+       
+          <hr >
+          © Copyright <span><a href="">MarkAb Solutions</a> </span> - 2023. All Rights Reserved
+        </h1>
+
+      </footer>
+    <!-- </div> -->
+    </section>
+  </div>
+  <script src="./video.js"></script>
+    <!-- =========================================Js code==================== -->
+    <script>
+      let listVideo = document.querySelectorAll(".video-list .vid");
+      let mainVideo = document.querySelector(".main-video video");
+      let title = document.querySelector(".main-video .title");
+      listVideo.forEach((video) => {
+        video.onclick = () => {
+          listVideo.forEach((vid) => vid.classList.remove("active"));
+          video.classList.add("active");
+          if (video.classList.contains("active")) {
+            let src = video.children[0].getAttribute("src");
+            mainVideo.src = src;
+            let text = video.children[1].innerHTML;
+            title.innerHTML = text;
+          }
+        };
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>
